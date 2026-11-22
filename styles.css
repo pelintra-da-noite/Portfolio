@@ -154,7 +154,4 @@ body.lb-open{overflow:hidden}
 .lang a:hover{color:var(--red)}
 .lang-cover{position:absolute;top:24px;right:var(--margin);font-size:12px;letter-spacing:.1em;z-index:2}
 /* cartazes */
-.shots.posters{display:block;columns:4;column-gap:10px}
-.posters .shot{break-inside:avoid;margin-bottom:10px}
-@media(max-width:900px){.shots.posters{columns:3}}
-@media(max-width:560px){.shots.posters{columns:2}}
+.posters .shot img{aspect-ratio:1/1.4142;object-fit:cover}
