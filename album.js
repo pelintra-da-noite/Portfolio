@@ -3,6 +3,11 @@
   var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
   var L = EN ? { frame: 'FRAME ', fs: 'fullscreen', close: 'close ×', closeA: 'Close', prev: 'Previous photo', next: 'Next photo', dlg: 'Album photographs', ph: 'add photo here' }
              : { frame: 'FOTOGRAMA ', fs: 'ecrã inteiro', close: 'fechar ×', closeA: 'Fechar', prev: 'Fotografia anterior', next: 'Fotografia seguinte', dlg: 'Fotografias do álbum', ph: 'colocar fotografia aqui' };
+  if (document.body.getAttribute('data-lb') === 'poster') {
+    L.frame = EN ? 'POSTER ' : 'CARTAZ '; L.dlg = EN ? 'Posters' : 'Cartazes';
+    L.prev = EN ? 'Previous poster' : 'Cartaz anterior'; L.next = EN ? 'Next poster' : 'Cartaz seguinte';
+    L.ph = EN ? 'add poster here' : 'colocar cartaz aqui';
+  }
   var shots = [].slice.call(document.querySelectorAll('.shot'));
   if (!shots.length) return;
   var cur = 0, box, stage, count, closeBtn, fsBtn, lastFocus, startX = null;
