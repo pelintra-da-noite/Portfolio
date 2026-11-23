@@ -160,3 +160,4 @@ body.lb-open{overflow:hidden}
 .pv-vid{position:relative;grid-column:3;grid-row:1 / span 2;margin:0;align-self:stretch;min-height:0;background:#000;border:1px solid var(--rule)}
 .pv-vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:560px){.pg-row.pv-row{grid-template-columns:repeat(2,1fr)}.pv-vid{grid-column:1 / -1;grid-row:auto;order:-1;aspect-ratio:9/16;width:min(100%,320px);justify-self:center}}
+.pv-vid video::-webkit-media-controls-fullscreen-button{display:none!important}
