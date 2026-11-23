@@ -155,6 +155,8 @@ body.lb-open{overflow:hidden}
 .lang-cover{position:absolute;top:24px;right:var(--margin);font-size:12px;letter-spacing:.1em;z-index:2}
 /* cartazes */
 .posters .shot img{aspect-ratio:1/1.4142;object-fit:cover}
-/* vídeos de recap nas colaborações: primeira célula da grelha, com a altura das duas primeiras linhas */
-.pv-vid{position:relative;grid-row:span 2;margin:0;align-self:stretch;min-height:0;background:#000;border:1px solid var(--rule)}
+/* vídeos de recap nas colaborações: fotos em duas colunas, vídeo à direita com a altura das duas primeiras linhas */
+.pg-row.pv-row{grid-template-columns:1fr 1fr .86fr}
+.pv-vid{position:relative;grid-column:3;grid-row:1 / span 2;margin:0;align-self:stretch;min-height:0;background:#000;border:1px solid var(--rule)}
 .pv-vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:560px){.pg-row.pv-row{grid-template-columns:repeat(2,1fr)}.pv-vid{grid-column:1 / -1;grid-row:auto;order:-1;aspect-ratio:9/16;width:min(100%,320px);justify-self:center}}
