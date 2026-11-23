@@ -181,3 +181,6 @@ body.lb-open{overflow:hidden}
 .vp-fill::after{content:"";position:absolute;right:-4px;top:-3px;width:9px;height:9px;border-radius:50%;background:#e7e1d2}
 .vp-time{white-space:nowrap;font-variant-numeric:tabular-nums}
 .vp :focus-visible{outline:1px dashed #e7e1d2;outline-offset:2px}
+.pg-row img.zoomable{cursor:zoom-in;transition:opacity .2s}
+.pg-row img.zoomable:hover{opacity:.88}
+.pg-row img.zoomable:focus-visible{outline:2px solid var(--red);outline-offset:2px}
