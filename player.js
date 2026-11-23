@@ -19,6 +19,8 @@
     v.setAttribute('playsinline', '');
     v.setAttribute('webkit-playsinline', '');
     fig.classList.add('vp');
+    v.volume = 0.5;
+    v.addEventListener('volumechange', function () { if (v.volume !== 0.5) v.volume = 0.5; });
     all.push(v);
 
     var big = document.createElement('button');
