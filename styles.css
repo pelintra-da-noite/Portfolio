@@ -155,3 +155,11 @@ body.lb-open{overflow:hidden}
 .lang-cover{position:absolute;top:24px;right:var(--margin);font-size:12px;letter-spacing:.1em;z-index:2}
 /* cartazes */
 .posters .shot img{aspect-ratio:1/1.4142;object-fit:cover}
+/* vídeos de recap nas colaborações */
+.pv{display:grid;grid-template-columns:1fr 2fr;gap:14px;align-items:start;margin-top:18px}
+.pv .pg{margin-top:0}
+.pv .pg-row{grid-template-columns:repeat(2,1fr)}
+.pv-vid{margin:0}
+.pv-vid video{width:100%;height:auto;aspect-ratio:9/16;display:block;background:#000;border:1px solid var(--rule)}
+.pv-vid figcaption{margin-top:6px;font-size:.8em;letter-spacing:.08em;color:var(--faint)}
+@media(max-width:720px){.pv{grid-template-columns:1fr}.pv-vid{max-width:360px}}
